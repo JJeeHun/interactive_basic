@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Interactive Animation</title>
+    </head>
+    <style>
+        @keyframes sample-ani {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(300px, 0px);
+            }
+            100% {
+                transform: translate(400px, 100px);
+            }
+        }
+        .box {
+            display: flex;
+            justify-content: center; /* X축 정렬? */
+            align-items: center; /* Y축 정렬? */
+            width: 100px;
+            height: 100px;
+            background: #fff000;
+            border: 2px solid black;
+            animation: infinite linear 2s sample-ani alternate;
+        }
+        .box:hover {
+            animation-play-state: paused;
+        }
+    </style>
+    <body>
+        <h1>Animation</h1>
+        <div class="box">BOX</div>
+    </body>
+</html>

@@ -10,12 +10,28 @@
         <style>
             .box-container {
                 display: flex;
+                justify-content: center;
             }
             .box {
                 width: 100px;
                 height: 100px;
                 border: 2px solid black;
                 background: rgb(255, 255, 0, 0.7);
+                transition: 1s 2s;
+                /* transition-property: all; 타겟
+                transition-duration: 1s; 변화가 몇초동안 이루어지는지 설정
+                transition-timing-function: ease; 변화의 속도(tip -> 개발자도구에서 transition 열고 transition-timin-function의 곡선이미지 클릭)
+                transition-delay: 2s; 변화하는 컴포넌트의 마우스포인터가 몇초이상 머물러있었는가의 따라 반응(ex->2s 마우스 포인터가 2초이상 머물러있어야 동작)*/
+            }
+            .box:hover {
+                /* transform: scale(2) rotate(45deg); */
+                /* transform: skew(30deg); X축 : skewX,skewY */
+                /* transform: translate(30px, 10px); X,Y축 존재 */
+                /* transform: scale(1.5);
+                transform-origin: 0% 0%; */
+                /* transform: rotate(30deg);
+                transform-origin: 50% 50%; */
+                transform: scale(2);
             }
         </style>
 
